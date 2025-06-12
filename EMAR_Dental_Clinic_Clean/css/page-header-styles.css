@@ -1,0 +1,174 @@
+/* Page Header Styles */
+.page-header {
+    position: relative;
+    padding: 140px 0 80px;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="none"/><path d="M30 10L10 30m60-20l20 20M10 70l20 20m60-20l-20 20" stroke="%23a67c52" stroke-width="0.8" fill="none"/></svg>');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: 'Bree Serif', serif;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    opacity: 0.9;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: fadeIn 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+.breadcrumb-item {
+    margin: 0 10px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.breadcrumb-item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #a67c52;
+    transition: width 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: #a67c52;
+}
+
+.breadcrumb-item a:hover::after {
+    width: 100%;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: '/';
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: -15px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 100px 0 60px;
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    .breadcrumb {
+        flex-wrap: wrap;
+    }
+    
+    .breadcrumb-item {
+        margin: 5px 10px;
+    }
+}
+
+/* Specific Page Header Backgrounds */
+.about-header {
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                     url('https://images.unsplash.com/photo-1588773843064-db35ffc402f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+}
+
+.services-header {
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                     url('https://images.unsplash.com/photo-1588773843064-db35ffc402f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+}
+
+.testimonials-header {
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                     url('https://images.unsplash.com/photo-1588773843064-db35ffc402f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+}
+
+.contact-header {
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                     url('https://images.unsplash.com/photo-1588773843064-db35ffc402f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+}

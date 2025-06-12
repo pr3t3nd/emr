@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMAR Dental Clinic - Your Trusted Dental Care</title>
+    <meta name="description" content="Professional dental care services at EMAR Dental Clinic. We provide comprehensive dental treatments with a gentle touch.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>" type="image/svg+xml">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Bree+Serif&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Custom CSS Variables -->
+    <style>
+        :root {
+            --primary-color: #2d2d2d;
+            --accent-color: #d4af37;
+            --text-color: #333;
+            --light-text: #fff;
+            
+            /* Colors */
+            --primary: #1a1a1a;
+            --primary-dark: #000000;
+            --accent: #d4af37;
+            --text: #333;
+            --light-text: #fff;
+            --bg-dark: #1a1a1a;
+            --bg-light: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            
+            /* Typography */
+            --font-family-primary: 'Merriweather', serif;
+            --font-family-secondary: 'Bree Serif', serif;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.25rem;
+            --font-size-xl: 1.5rem;
+            --font-size-xxl: 2rem;
+            --font-weight-light: 300;
+            --font-weight-regular: 400;
+            --font-weight-bold: 700;
+            
+            /* Spacing */
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            
+            /* Transitions */
+            --transition-base: all 0.3s ease;
+            --transition-fast: all 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Content Wrapper -->
+    <div id="main-content">
+    <!-- Header -->
+    <header id="header" class="mainHeader">
+        <div class="header-background"></div>
+        <!-- Top Bar -->
+        <div class="topBar">
+            <div class="container">
+                <div class="topBarInner">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/Logohighres.png" alt="EMAR Dental Clinic" class="logo-img">
+                            <div class="logo-text">
+                                <span class="logo-title">EMAR</span>
+                                <span class="logo-subtitle">Dental Clinic</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <span>Monday - Friday 08:00-19:00</span>
+                                <span>Saturday and Sunday - CLOSED</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <a href="tel:+355694050402">+355 69 40 50 402</a>
+                                <a href="mailto:emardentalclinic@gmail.com">emardentalclinic@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <a href="https://maps.app.goo.gl/fAFmMZY72j1YdFb39" target="_blank" rel="noopener noreferrer" class="location-link">Our Location</a>
+                                <span>Click for directions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="mainNav">
+            <div class="container">
+                <div class="navInner">
+                    <ul class="mainMenu">
+                        <li class="menu-item"><a href="index.html">HOME</a></li>
+                        <li class="menu-item"><a href="about.html">ABOUT US</a></li>
+                        <li class="menu-item"><a href="services.html">SERVICES</a></li>
+                        <li class="menu-item"><a href="testimonials.html">TESTIMONIALS</a></li>
+                        <li class="menu-item"><a href="blog.html">BLOG</a></li>
+                        <li class="menu-item"><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    
+                    <button class="mobileMenuToggle" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobileMenuOverlay">
+        <div class="mobileMenuContainer">
+            <button class="closeMobileMenu" aria-label="Close Menu">&times;</button>
+            <ul class="mobileMenu">
+                <li class="menu-item current-menu-item"><a href="index.html">HOME</a></li>
+                <li class="menu-item"><a href="about.html">ABOUT US</a></li>
+                <li class="menu-item"><a href="services.html">SERVICES</a></li>
+                <li class="menu-item"><a href="testimonials.html">TESTIMONIALS</a></li>
+                <li class="menu-item"><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content-wrapper">
+            <div class="hero-content">
+                <h1>Your Smile, Our Priority</h1>
+                <p class="lead">Experience exceptional dental care in a comfortable and relaxing environment.</p>
+                <div class="hero-buttons">
+                    <a href="#appointment" class="btn btn-primary">Book an Appointment</a>
+                    <a href="#services" class="btn btn-outline">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Staff Section -->
+    <section class="section" id="staff">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Staff</h2>
+                <p>Our experienced dental professionals are here to provide you with the best care</p>
+                <span style="display: none;">is invisible because its white also</span>
+            </div>
+            
+            <!-- Featured Doctor -->
+            <div class="featured-doctor">
+                <div class="featured-doctor-content">
+                    <h3>Dr. Ermelinda Mara</h3>
+                    <p class="doctor-title">Lead Dentist & Practice Owner</p>
+                    <div class="divider"></div>
+                    <p class="doctor-bio">With over 3 years of dedicated experience in general and cosmetic dentistry, Dr. Ermelinda Mara brings a perfect blend of expertise and compassionate care to EMAR Dental Clinic. As the founder and lead dentist, she is committed to providing personalized dental treatments in a comfortable and welcoming environment. Dr. Mara stays at the forefront of dental innovations to ensure her patients receive the highest standard of care.</p>
+                    <ul class="doctor-specialties">
+                        <li>General Dentistry</li>
+                        <li>Cosmetic Dentistry</li>
+                        <li>Preventive Care</li>
+                    </ul>
+                    <a href="#appointment" class="btn btn-primary">Book with Dr. Mara</a>
+                </div>
+                <div class="featured-doctor-image">
+                    <img src="images/Ina.jpg" alt="Dr. Ermelinda Mara">
+                </div>
+            </div>
+
+            <!-- Staff Grid -->
+            <div class="staff-grid">
+                <div class="staff-card">
+                    <div class="staff-image">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Michael Chen">
+                    </div>
+                    <div class="staff-info">
+                        <h3>Dr. Michael Chen</h3>
+                        <p class="staff-role">Orthodontist</p>
+                        <p class="staff-bio">Dr. Chen is our expert in orthodontics and Invisalign treatments, helping patients achieve perfect smiles.</p>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-image">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez">
+                    </div>
+                    <div class="staff-info">
+                        <h3>Emily Rodriguez</h3>
+                        <p class="staff-role">Dental Hygienist</p>
+                        <p class="staff-bio">Emily provides exceptional dental cleanings and patient education for optimal oral health.</p>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-image">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jessica Williams">
+                    </div>
+                    <div class="staff-info">
+                        <h3>Jessica Williams</h3>
+                        <p class="staff-role">Dental Assistant</p>
+                        <p class="staff-bio">Jessica ensures every patient feels comfortable and receives personalized care during their visit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section bg-light" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Patients Say</h2>
+                <p>Hear from people who have experienced our exceptional dental care</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The clinic is easily accessible, modern and super clean! The staff is welcoming and Dr. Ermelinda is always kind, professional and detail oriented."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">R</div>
+                        <div class="author-info">
+                            <h4>Ridiena Sulaj</h4>
+                            <p>Google Review</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Looking for the best dental clinic in town? You've just found it!!! Dr. Ermelinda is simply the best, professional, gentle, and incredibly skilled. The clinic is spotless, modern, and welcoming."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">E</div>
+                        <div class="author-info">
+                            <h4>Enxhi Dyrmishi</h4>
+                            <p>Local Guide</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Dr. Ermelinda is a very kind and gentle doctor, who with her professionalism and patience made me feel very calm during the procedure and understood where the health problem of my teeth lies."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">D</div>
+                        <div class="author-info">
+                            <h4>Debi Debora</h4>
+                            <p>Google Review</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Content Section -->
+    <section class="section bg-light" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive dental care for the whole family</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Location</h2>
+                <p>Visit us at our conveniently located dental clinic</p>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.9999999999995!2d19.808233746663152!3d41.3165257748763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE4JzU5LjUiTiAxOcKwNDgnMjkuNiJF!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s&z=18&t=k&maptype=satellite" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="EMAR Dental Clinic Location">
+                </iframe>
+            </div>
+            <div class="map-address">
+                <div class="address-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Rr. e Kavajës, Tiranë 1001, Albania</p>
+                </div>
+                <a href="https://maps.app.goo.gl/fAFmMZY72j1YdFb39" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                    <i class="fas fa-directions"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    </div> <!-- End of #main-content -->
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/Logohighres2.png" alt="EMAR Dental Clinic" class="footer-logo">
+                    <p>Providing exceptional dental care with a gentle touch. Your smile is our top priority.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">General Dentistry</a></li>
+                        <li><a href="#">Cosmetic Dentistry</a></li>
+                        <li><a href="#">Orthodontics</a></li>
+                        <li><a href="#">Teeth Cleaning</a></li>
+                        <li><a href="#">Dental Implants</a></li>
+                        <li><a href="#">Teeth Whitening</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <a href="tel:+355694050402">+355 69 40 50 402</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:emardentalclinic@gmail.com">emardentalclinic@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 EMAR Dental Clinic. All Rights Reserved.
+                </div>
+                <div class="footer-links-bottom">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>

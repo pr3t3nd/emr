@@ -1,0 +1,496 @@
+/* ==========================================================================
+   Staff Section Animations
+   ========================================================================== */
+
+/* Section Header Animation */
+.section-header {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Featured Doctor Animation */
+.featured-doctor {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+.featured-doctor {
+    display: flex;
+    align-items: stretch;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 1200px;  /* Increased from 1000px */
+    width: 90%;  /* Added for better responsiveness */
+    margin: 0 auto;
+    min-height: 500px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #f0f0f0;
+}
+
+.featured-doctor-image {
+    position: relative;
+    width: 45%;
+    overflow: hidden;
+}
+
+.featured-doctor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.featured-doctor-content {
+    padding: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-doctor-content h3 {
+    font-size: 2.2rem;
+    color: #2c2c2c;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.doctor-title {
+    color: #d4af37; /* Gold accent color */
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.doctor-bio {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+.doctor-specialties {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.doctor-specialties li {
+    color: #444;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.doctor-specialties li::before {
+    content: '✓';
+    color: #a67c52; /* Matching button color */
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.doctor-specialties li:hover::before {
+    color: #b8942b; /* Gold accent hover color */
+}
+
+.btn-primary {
+    background: #d4af37; /* Gold accent color */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: flex-start;
+}
+
+.btn-primary:hover {
+    background: #b8942b; /* Darker gold accent color */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(180, 157, 43, 0.3);
+}
+
+.featured-doctor:hover .featured-doctor-image img {
+    transform: scale(1.05);
+}
+
+.featured-doctor:hover .featured-doctor-image {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.featured-doctor:hover .featured-doctor-image img {
+    transform: scale(1.05);
+}
+
+/* Staff Grid Animation */
+.staff-grid {
+    perspective: 1000px;
+}
+
+.staff-card {
+    opacity: 0;
+    transform: translateY(30px) rotateX(10deg);
+    transition: all 0.6s cubic-bezier(0.5, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    animation: staffCardAppear 0.8s ease-out forwards;
+    animation-delay: calc(var(--delay) * 0.1s);
+}
+
+@keyframes staffCardAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+.staff-card:nth-child(1) { --delay: 1; }
+.staff-card:nth-child(2) { --delay: 2; }
+.staff-card:nth-child(3) { --delay: 3; }
+.staff-card:nth-child(4) { --delay: 4; }
+
+/* Card Hover Effects */
+#staff {
+    padding: 100px 0;
+    position: relative;
+    background-color: #f9f9f7;
+    overflow: hidden;
+    color: #333;
+}
+
+#staff::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="none"/><path d="M30 10L10 30m60-20l20 20M10 70l20 20m60-20l-20 20" stroke="%23e0e0e0" stroke-width="1" fill="none"/></svg>');
+    opacity: 1;
+    z-index: 0;
+}
+
+/* Update section header text color */
+#staff .section-header h2 {
+    color: #2c2c2c;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#staff .section-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+/* Update card styles to match theme */
+.featured-doctor {
+    background: #3a3a3a; /* Slightly lighter gray for the card */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Update text colors in the card */
+.featured-doctor-content h3 {
+    color: #f5f5f5;  /* Lighter text */
+    font-size: 2.5rem;  /* Slightly larger */
+    margin-bottom: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.doctor-title {
+    color: #d4af37;  /* Gold accent color */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.doctor-title:hover {
+    color: #8c6b48;  /* Button hover color */
+    cursor: default;
+}
+
+.doctor-bio {
+    color: #e0e0e0;  /* Lighter gray */
+    line-height: 1.9;  /* More line height */
+    margin-bottom: 30px;
+    font-size: 1.15rem;  /* Slightly larger */
+    font-weight: 300;  /* Lighter weight */
+}
+
+.doctor-specialties {
+    margin-bottom: 35px;
+}
+
+.doctor-specialties li {
+    color: #f0f0f0;  /* Very light gray */
+    position: relative;
+    padding-left: 35px;  /* More space for checkmark */
+    margin-bottom: 15px;  /* More spacing */
+    font-size: 1.15rem;  /* Slightly larger */
+    font-weight: 300;  /* Lighter weight */
+}
+
+.doctor-specialties li::before {
+    content: '✓';
+    color: #a67c52;
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+/* Style the divider */
+.doctor-divider {
+    height: 1px;
+    background-color: #a67c52;  /* Matching button color */
+    margin: 25px 0;
+    border: none;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.doctor-divider:hover {
+    opacity: 1;
+    height: 2px;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.staff-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: var(--bg-light);
+}
+
+.staff-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.staff-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.staff-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.staff-card:hover .staff-image img {
+    transform: scale(1.1);
+}
+
+.staff-info {
+    padding: 25px;
+    background: white;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.staff-info h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.staff-role {
+    color: var(--text);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.staff-bio {
+    color: var(--text);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.featured-doctor {
+    display: flex;
+    align-items: stretch;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 40px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.featured-doctor-image {
+    width: 45%;
+    overflow: hidden;
+}
+
+.featured-doctor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.featured-doctor-content {
+    padding: 50px;
+    width: 55%;
+}
+
+.featured-doctor-content h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.doctor-title {
+    color: var(--accent);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.doctor-bio {
+    color: var(--text);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.doctor-specialties {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.doctor-specialties li {
+    color: var(--text);
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.doctor-specialties li:before {
+    content: "•";
+    color: var(--accent);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+.staff-card:hover .staff-info {
+    background: #f9f9f9;
+}
+
+.staff-role {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: inline-block;
+    position: relative;
+}
+
+.staff-role::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.staff-card:hover .staff-role::after {
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .staff-card {
+        margin-bottom: 30px;
+    }
+    
+    .featured-doctor {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .featured-doctor-image {
+        margin: 0 auto 30px;
+        max-width: 400px;
+    }
+}
+
+/* Animation for staff details */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add animation to staff info elements */
+.staff-info h3,
+.staff-info .staff-role,
+.staff-info .staff-bio {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.staff-info h3 { animation-delay: 0.2s; }
+.staff-info .staff-role { animation-delay: 0.3s; }
+.staff-info .staff-bio { animation-delay: 0.4s; }

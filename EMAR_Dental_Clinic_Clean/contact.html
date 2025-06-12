@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EMAR Dental Clinic</title>
+    <meta name="description" content="Get in touch with EMAR Dental Clinic. Book an appointment, find our location, or ask us a question. We're here to help with all your dental needs.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Bree+Serif&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact-styles.css">
+    
+    <style>
+        :root {
+            --primary-color: #d4af37; /* Gold primary color */
+            --secondary-color: #b6952a; /* Darker gold for hover states */
+            --accent-color: #ff6b6b;
+            --heading-color: #2c3e50;
+            --text-color: #505962;
+            --text-light: #6c757d;
+            --light-gray: #f8f9fa;
+            --white: #ffffff;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --header-height: 120px; /* For consistent header spacing */
+        }
+        
+        /* Ensure content doesn't hide behind fixed header */
+        body {
+            padding-top: var(--header-height);
+        }
+        
+        /* Ensure main content starts below header */
+        main {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="mainHeader">
+        <!-- Top Bar -->
+        <div class="topBar">
+            <div class="container">
+                <div class="topBarInner">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/Logohighres.png" alt="EMAR Dental Clinic" class="logo-img">
+                            <div class="logo-text">
+                                <span class="logo-title">EMAR</span>
+                                <span class="logo-subtitle">Dental Clinic</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <span>Monday - Friday 08:00-19:00</span>
+                                <span>Saturday and Sunday - CLOSED</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <a href="tel:+355694050402">+355 69 40 50 402</a>
+                                <a href="mailto:emardentalclinic@gmail.com">emardentalclinic@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <a href="https://maps.app.goo.gl/fAFmMZY72j1YdFb39" target="_blank" rel="noopener noreferrer" class="location-link">Our Location</a>
+                                <span>Click for directions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="mainNav">
+            <div class="container">
+                <div class="navInner">
+                    <ul class="mainMenu">
+                        <li class="menu-item"><a href="index.html">HOME</a></li>
+                        <li class="menu-item"><a href="about.html">ABOUT US</a></li>
+                        <li class="menu-item"><a href="services.html">SERVICES</a></li>
+                        <li class="menu-item"><a href="testimonials.html">TESTIMONIALS</a></li>
+                        <li class="menu-item"><a href="blog.html">BLOG</a></li>
+                        <li class="menu-item"><a href="contact.html" class="active">CONTACT US</a></li>
+                    </ul>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header with Hero Styling -->
+    <section class="page-header contact-header">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Contact Us</h1>
+                    <p class="lead">We'd love to hear from you. Get in touch with us today.</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>We'd love to hear from you. Here's how you can reach us.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Our Location</h3>
+                    <p>123 Dental Street<br>City, State 10001<br>Country</p>
+                    <a href="#map" class="btn-link">View on Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone Number</h3>
+                    <p><a href="tel:+355694050402">+355 69 40 50 402</a></p>
+                    <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
+                    <a href="tel:+355694050402" class="btn-link">Call Now <i class="fas fa-phone-alt"></i></a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:emardentalclinic@gmail.com">emardentalclinic@gmail.com</a></p>
+                    <p>We'll respond within 24 hours</p>
+                    <a href="mailto:emardentalclinic@gmail.com" class="btn-link">Send Email <i class="far fa-paper-plane"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment-section" id="appointment">
+        <div class="container">
+            <div class="appointment-container">
+                <div class="appointment-info">
+                    <h2>Book an Appointment</h2>
+                    <p>Fill out the form and we'll get back to you to confirm your appointment. Or give us a call at <a href="tel:+355694050402">+355 69 40 50 402</a>.</p>
+                    
+                    <div class="appointment-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Same-Day Appointments</h4>
+                                <p>Emergency? We'll do our best to see you the same day.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Flexible Scheduling</h4>
+                                <p>We offer appointments that work with your busy schedule.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Expert Dentists</h4>
+                                <p>Our experienced team provides top-quality dental care.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="appointment-form">
+                    <form id="appointmentForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="appointmentDate">Preferred Date <span class="required">*</span></label>
+                                <input type="date" id="appointmentDate" name="appointmentDate" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="appointmentTime">Preferred Time <span class="required">*</span></label>
+                                <select id="appointmentTime" name="appointmentTime" required>
+                                    <option value="">Select Time</option>
+                                    <option value="08:00">8:00 AM</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="">Select a Service</option>
+                                <option value="general">General Dentistry</option>
+                                <option value="cosmetic">Cosmetic Dentistry</option>
+                                <option value="orthodontics">Orthodontics</option>
+                                <option value="implants">Dental Implants</option>
+                                <option value="emergency">Emergency Care</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Additional Notes</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Map Section -->
+     <section class="map-section" id="map">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Location</h2>
+                <p>Visit us at our conveniently located dental clinic</p>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.9999999999995!2d19.808233746663152!3d41.3165257748763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE4JzU5LjUiTiAxOcKwNDgnMjkuNiJF!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s&z=18&t=k&maptype=satellite" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="EMAR Dental Clinic Location">
+                </iframe>
+            </div>
+            <div class="map-address">
+                <div class="address-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Rr. e Kavajës, Tiranë 1001, Albania</p>
+                </div>
+                <a href="https://maps.app.goo.gl/fAFmMZY72j1YdFb39" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fas fa-directions"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/Logohighres2.png" alt="EMAR Dental Clinic" class="footer-logo">
+                    <p>Providing exceptional dental care with a gentle touch. Your smile is our top priority.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#general">General Dentistry</a></li>
+                        <li><a href="services.html#cosmetic">Cosmetic Dentistry</a></li>
+                        <li><a href="services.html#orthodontics">Orthodontics</a></li>
+                        <li><a href="services.html#implants">Dental Implants</a></li>
+                        <li><a href="services.html#emergency">Emergency Care</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Dental Street, City, Country</li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+355694050402">+355 69 40 50 402</a></li>
+                        <li><i class="far fa-envelope"></i> <a href="mailto:emardentalclinic@gmail.com">emardentalclinic@gmail.com</a></li>
+                        <li><i class="far fa-clock"></i> Mon-Fri: 8:00 AM - 7:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 EMAR Dental Clinic. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobileMenuToggle');
+        const mainMenu = document.querySelector('.mainMenu');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mainMenu.classList.toggle('active');
+            });
+        }
+        
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        if (backToTop) {
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+            
+            backToTop.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mainMenu && mainMenu.classList.contains('active')) {
+                        mobileMenuToggle.classList.remove('active');
+                        mainMenu.classList.remove('active');
+                    }
+                }
+            });
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const faqAnswer = question.nextElementSibling;
+                const isOpen = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                    item.querySelector('.faq-question i').className = 'fas fa-chevron-down';
+                });
+                
+                // Open clicked item if it was closed
+                if (!isOpen) {
+                    faqItem.classList.add('active');
+                    faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+                    question.querySelector('i').className = 'fas fa-chevron-up';
+                }
+            });
+        });
+        
+        // Form submission
+        const appointmentForm = document.getElementById('appointmentForm');
+        if (appointmentForm) {
+            appointmentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const formObject = {};
+                formData.forEach((value, key) => {
+                    formObject[key] = value;
+                });
+                
+                // In a real application, you would send this data to a server
+                console.log('Form submitted:', formObject);
+                
+                // Show success message
+                alert('Thank you for your appointment request! We will contact you shortly to confirm your appointment.');
+                this.reset();
+            });
+        }
+        
+        // Set minimum date for appointment date picker to today
+        const today = new Date().toISOString().split('T')[0];
+        const dateInput = document.getElementById('appointmentDate');
+        if (dateInput) {
+            dateInput.min = today;
+        }
+    </script>
+</body>
+</html>
