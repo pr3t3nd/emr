@@ -243,12 +243,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize scroll handler
     function handleScroll() {
-        // Header scroll effect
+        // Header scroll effect - only apply transparency on homepage
         const header = document.getElementById('header');
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
+        const isHomepage = document.body.classList.contains('homepage');
+        
+        if (isHomepage) {
+            // On homepage, add/remove scrolled class based on scroll position
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         } else {
-            header.classList.remove('scrolled');
+            // On all other pages, ensure header is always solid
+            header.classList.add('scrolled');
         }
     }
 
