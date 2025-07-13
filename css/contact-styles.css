@@ -67,14 +67,15 @@
 
 /* Map Section */
 .map-section {
-    padding: 80px 0 100px;
-    margin-bottom: 40px;
-    background-color: var(--light-gray);
+    padding: 0 0 20px 0;
+    margin-bottom: 0;
+    background-color: #ffffff;
 }
 
 .map-section .section-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    padding-top: 20px;
 }
 
 .map-section .section-header h2 {
@@ -98,7 +99,7 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    margin-bottom: 25px;
+    margin: 0 0 15px 0;
 }
 
 .map-container iframe {
@@ -111,10 +112,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
-    padding: 20px 30px;
+    background: #fff;
+    padding: 15px 25px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin: 0;
 }
 
 .map-address .address-item {
@@ -125,12 +127,12 @@
 
 .map-address .address-item i {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: #ffd700;
 }
 
 .map-address .address-item p {
     margin: 0;
-    color: var(--text-color);
+    color: #2d2d2d;
     font-size: 1.05rem;
 }
 
@@ -139,8 +141,8 @@
     align-items: center;
     gap: 8px;
     padding: 12px 25px;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #ffd700;
+    color: #2d2d2d;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -150,13 +152,53 @@
 }
 
 .map-address .btn:hover {
-    background-color: var(--secondary-color);
+    background-color: #ffd700;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .map-address .btn i {
     font-size: 1.1rem;
+}
+
+.map-address .feature-text h4 {
+    margin: 0 0 5px 0;
+    color: #2d2d2d;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.feature-icon {
+    width: 45px;
+    height: 45px;
+    background: #ffd700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    color: #2d2d2d;
+    box-shadow: 0 3px 10px rgba(212, 175, 55, 0.3);
+}
+
+.feature-text p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 /* Responsive adjustments */
@@ -193,19 +235,19 @@
 .breadcrumb-item {
     margin: 0 10px;
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #2d2d2d;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .breadcrumb-item a {
-    color: white;
+    color: #2d2d2d;
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 400;
 }
 
 .breadcrumb-item a:hover {
-    color: var(--primary-color);
+    color: #ffd700;
     text-decoration: underline;
 }
 
@@ -236,7 +278,8 @@
 /* Contact Info Section */
 .contact-info-section {
     padding: 80px 0;
-    background-color: #fff;
+    position: relative;
+    background-color: #ffffff;
 }
 
 .section-header {
@@ -246,14 +289,14 @@
 
 .section-header h2 {
     font-size: 2.5rem;
-    color: var(--heading-color);
+    color: #2d2d2d;
     margin-bottom: 15px;
     font-family: 'Bree Serif', serif;
 }
 
 .section-header p {
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: #666;
     max-width: 700px;
     margin: 0 auto;
 }
@@ -265,67 +308,101 @@
     margin-top: 40px;
 }
 
+/* Contact cards */
 .contact-card {
-    background: #fff;
+    background: #ffffff;
+    padding: 30px;
     border-radius: 10px;
-    padding: 40px 30px;
     text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+    height: 100%;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #eee;
+}
+
+/* Style for the location card */
+.contact-card:first-child .contact-icon {
+    background: #f8f9fa;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border: 1px solid #f0f0f0;
+}
+
+.contact-card:first-child h3 {
+    color: #2d2d2d;
+    margin-bottom: 10px;
+}
+
+.contact-card:first-child p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.contact-card:first-child .btn-link {
+    color: var(--accent);
+    font-weight: 600;
 }
 
 .contact-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent);
+}
+
+/* Hover effect for all cards */
+.contact-card:first-child:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent);
 }
 
 .contact-icon {
     width: 80px;
     height: 80px;
-    background: rgba(25, 181, 144, 0.1);
+    background: rgba(255, 215, 0, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 25px;
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: #ffd700;
     transition: all 0.3s ease;
 }
 
 .contact-card:hover .contact-icon {
-    background: var(--primary-color);
-    color: #fff;
+    background: #ffd700;
+    color: #2d2d2d;
     transform: rotateY(180deg);
 }
 
 .contact-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: var(--heading-color);
+    color: #2d2d2d;
 }
 
 .contact-card p {
-    color: var(--text-color);
+    color: #666;
     line-height: 1.7;
     margin-bottom: 20px;
 }
 
 .contact-card a {
-    color: var(--text-color);
+    color: #666;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .contact-card a:hover {
-    color: var(--primary-color);
+    color: #ffd700;
 }
 
 .btn-link {
     display: inline-flex;
     align-items: center;
-    color: var(--primary-color);
+    color: #ffd700;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -337,7 +414,7 @@
 }
 
 .btn-link:hover {
-    color: var(--secondary-color);
+    color: #ffd700;
 }
 
 .btn-link:hover i {
@@ -364,7 +441,9 @@
 /* Appointment Section */
 .appointment-section {
     padding: 80px 0;
-    background-color: #f9f9f9;
+    background: #f5f5dc; /* Powder yellow background */
+    position: relative;
+    color: #2d2d2d;
 }
 
 .appointment-container {
@@ -379,24 +458,42 @@
 
 .appointment-info {
     padding: 50px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: #fff;
+    background: #f5f5dc; /* Powder yellow background */
+    color: #2d2d2d;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .appointment-info h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #2d2d2d;
     font-family: 'Bree Serif', serif;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.appointment-info h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 3px;
+    background: #ffd700;
 }
 
 .appointment-info p {
+    color: #666;
     margin-bottom: 30px;
-    opacity: 0.9;
+    font-size: 1.1rem;
     line-height: 1.7;
+    max-width: 100%;
 }
 
 .appointment-info a {
-    color: #fff;
+    color: #2d2d2d;
     text-decoration: underline;
 }
 
@@ -404,47 +501,37 @@
     margin-top: 40px;
 }
 
-.feature {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 25px;
-}
-
-.feature:last-child {
-    margin-bottom: 0;
-}
-
-.feature-icon {
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    flex-shrink: 0;
-    font-size: 1.2rem;
-    color: #fff;
-}
-
-.feature-text h4 {
-    margin: 0 0 5px;
-    font-size: 1.1rem;
-}
-
-.feature-text p {
-    margin: 0;
-    font-size: 0.95rem;
-    opacity: 0.9;
-}
-
 .appointment-form {
-    padding: 50px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.appointment-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffd700, #ffd700);
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .form-row {
@@ -457,7 +544,7 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: var(--heading-color);
+    color: #2d2d2d;
 }
 
 .required {
@@ -472,10 +559,12 @@ select,
 textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #ddd;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
     border-radius: 5px;
     font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    color: #2d2d2d;
+    transition: all 0.3s ease;
 }
 
 input[type="text"]:focus,
@@ -485,8 +574,8 @@ input[type="date"]:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(25, 181, 144, 0.2);
+    border-color: #ffd700;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
 }
 
 select {
@@ -503,23 +592,46 @@ textarea {
     min-height: 120px;
 }
 
-.btn-primary {
-    background: var(--primary-color);
-    color: #fff;
+.button[type="submit"] {
+    background: linear-gradient(135deg, var(--accent) 0%, #e8c04d 100%);
+    color: #1a1a1a;
     border: none;
-    padding: 12px 30px;
+    padding: 14px 30px;
     border-radius: 5px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    width: 100%;
     transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Bree Serif', serif;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
 }
 
-.btn-primary:hover {
-    background: var(--secondary-color);
+button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+button[type="submit"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(25, 181, 144, 0.3);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, #d4af37 0%, #e8c04d 100%);
+}
+
+button[type="submit"]:hover::before {
+    left: 0;
 }
 
 /* FAQ Section */
@@ -691,18 +803,17 @@ textarea {
 @media (max-width: 992px) {
     .appointment-container {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
     
     .appointment-info {
-        padding: 40px;
+        text-align: center;
     }
     
-    .appointment-form {
-        padding: 0 40px 40px;
+    .appointment-info h2::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
-}
-
-@media (max-width: 768px) {
     .page-header h1 {
         font-size: 2.5rem;
     }

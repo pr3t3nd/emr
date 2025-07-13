@@ -93,15 +93,17 @@ function updateMainServices() {
         const serviceCard = document.createElement('div');
         serviceCard.className = 'service-card';
         serviceCard.innerHTML = `
-            <div class="service-image">
-                <img src="${service.image}" alt="${service.title}" class="service-img">
+            <div class="service-card-inner">
+                <div class="service-icon">
+                    <i class="${service.icon}"></i>
+                </div>
+                <h3 class="service-title">${service.title}</h3>
+                <p class="service-description">${service.description}</p>
+                <a href="#" class="service-link">
+                    Learn More
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-            <div class="service-icon">
-                <i class="${service.icon}"></i>
-            </div>
-            <h3>${service.title}</h3>
-            <p>${service.description}</p>
-            <a href="#" class="btn btn-outline">Learn More</a>
         `;
         servicesGrid.appendChild(serviceCard);
     });

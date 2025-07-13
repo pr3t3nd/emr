@@ -4,9 +4,18 @@
 .page-header {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/about-header.jpg') no-repeat center center/cover;
     color: #fff;
-    padding: 120px 0 80px;
+    padding: 120px 0 60px;
     text-align: center;
     position: relative;
+    margin-top: 80px; /* Add margin to account for fixed header */
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 100px 0 40px;
+        margin-top: 60px; /* Adjusted for mobile header height */
+    }
 }
 
 .page-header h1 {

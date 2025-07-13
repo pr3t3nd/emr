@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/hero-styles.css">
     <link rel="stylesheet" href="css/staff-styles.css">
+    <link rel="stylesheet" href="css/services-styles.css">
     
     <!-- Custom CSS Variables -->
     <style>
@@ -131,6 +132,9 @@
                         <a href="#" class="social-link" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
+                        <a href="https://wa.me/355694050402?text=Hello%20EMAR%20Dental%20Clinic%2C%20I%20would%20like%20to%20make%20an%20appointment" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                     
                     <button class="mobileMenuToggle" aria-label="Toggle Menu">
@@ -157,10 +161,32 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Slideshow -->
     <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="overlay"></div>
+        <div class="hero-slideshow">
+            <!-- Slide 1 -->
+            <div class="slide active" style="background-image: url('images/clinicentry.jpg');">
+                <div class="overlay"></div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image: url('images/doc_patient.jpg');">
+                <div class="overlay"></div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide" style="background-image: url('images/hero3.jpg');">
+                <div class="overlay"></div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide" style="background-image: url('images/hero4.jpg');">
+                <div class="overlay"></div>
+            </div>
+            <!-- Navigation Dots -->
+            <div class="slideshow-nav">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
         </div>
         <div class="hero-content-wrapper">
             <div class="hero-content">
@@ -298,15 +324,22 @@
     </section>
 
     <!-- Services Content Section -->
-    <section class="section bg-light" id="services">
+    <section class="section services-section" id="services">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive dental care for the whole family</p>
+            <div class="section-header text-center">
+                <span class="section-subtitle">Our Services</span>
+                <h2 class="section-title">Comprehensive Dental Care</h2>
+                <p class="section-description">We offer a wide range of dental services to meet all your oral health needs with the latest technology and techniques.</p>
             </div>
             
             <div class="services-grid">
-                <!-- Service cards will be populated by JavaScript -->
+                <!-- Service cards will be populated by services.js -->
+            </div>
+            
+            <div class="cta-section text-center">
+                <h3>Ready to transform your smile?</h3>
+                <p>Book your consultation today and experience the difference of expert dental care.</p>
+                <a href="contact.html#appointment" class="btn btn-primary">Book an Appointment</a>
             </div>
         </div>
     </section>
@@ -332,7 +365,7 @@
             <div class="map-address">
                 <div class="address-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <p>Rr. e Kavajës, Tiranë 1001, Albania</p>
+                    <p>Rr.Skender Luarasi, Tirane</p>
                 </div>
                 <a href="https://maps.app.goo.gl/fAFmMZY72j1YdFb39" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                     <i class="fas fa-directions"></i> Get Directions
@@ -360,46 +393,44 @@
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#team">Our Team</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-services">
                     <h3>Our Services</h3>
                     <ul>
-                        <li><a href="#">General Dentistry</a></li>
-                        <li><a href="#">Cosmetic Dentistry</a></li>
-                        <li><a href="#">Orthodontics</a></li>
-                        <li><a href="#">Teeth Cleaning</a></li>
-                        <li><a href="#">Dental Implants</a></li>
-                        <li><a href="#">Teeth Whitening</a></li>
+                        <li><a href="services.html#general">General Dentistry</a></li>
+                        <li><a href="services.html#cosmetic">Cosmetic Dentistry</a></li>
+                        <li><a href="services.html#orthodontics">Orthodontics</a></li>
+                        <li><a href="services.html#implants">Dental Implants</a></li>
+                        <li><a href="services.html#emergency">Emergency Care</a></li>
+                        <li><a href="services.html">More...</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-phone"></i> <a href="tel:+355694050402">+355 69 40 50 402</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:emardentalclinic@gmail.com">emardentalclinic@gmail.com</a></li>
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Rr. Skender Luarasi, Tirana</li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+355694050402">+355 69 40 50 402</a></li>
+                        <li><i class="far fa-envelope"></i> <a href="mailto:emardentalclinic@gmail.com">emardentalclinic@gmail.com</a></li>
+                        <li><i class="far fa-clock"></i> Mon-Fri: 8:00 AM - 6:00 PM</li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <div class="copyright">
-                    &copy; 2023 EMAR Dental Clinic. All Rights Reserved.
+                <p>&copy; 2025 EMAR Dental Clinic. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="terms-of-service.html">Terms of Service</a>
                 </div>
-                <div class="footer-links-bottom">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Sitemap</a>
-                </div>
-            </div>
         </div>
     </footer>
 
@@ -411,6 +442,7 @@
     <!-- JavaScript -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
     <script src="js/main.js"></script>
+    <script src="js/slideshow.js"></script>
     <script src="js/services.js"></script>
 </body>
 </html>

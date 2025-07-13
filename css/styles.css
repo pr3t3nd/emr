@@ -76,8 +76,34 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 100%;
     background-color: #1a1a1a; /* Dark background to match theme */
+}
+
+/* Ensure fixed header stays on top */
+.mainHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 100px;
+}
+
+/* Page content wrapper - add this to pages that need spacing */
+.page-content {
+    padding-top: 100px;
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+    .mainHeader {
+        height: 80px;
+    }
+    .page-content {
+        padding-top: 80px;
+    }
 }
 
 /* Sections */
