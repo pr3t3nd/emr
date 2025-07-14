@@ -32,6 +32,178 @@
             --white: #ffffff;
             --dark: #343a40;
         }
+        
+        /* Service Modal Styles */
+        .service-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1100; /* Higher than navbar z-index */
+            overflow-y: auto;
+            padding-top: 100px; /* Space for navbar */
+            padding-bottom: 40px;
+        }
+        
+        .service-modal-content {
+            background-color: var(--white);
+            margin: 40px auto;
+            max-width: 900px;
+            width: 90%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 10;
+        }
+        
+        .close-modal:hover {
+            color: var(--accent);
+        }
+        
+        .service-modal-body {
+            padding: 40px;
+        }
+        
+        .service-detail-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .service-detail-header .service-icon {
+            font-size: 48px;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .service-detail-header h2 {
+            color: var(--primary);
+            margin: 0;
+            font-size: 28px;
+        }
+        
+        .service-detail-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .service-description, .service-gallery {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .service-description h3, .service-gallery h3 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 22px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .service-description h3::after, .service-gallery h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .service-description p {
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .process-step i {
+            color: var(--accent);
+            margin-top: 4px;
+        }
+        
+        .process-step span {
+            color: var(--text);
+            line-height: 1.5;
+        }
+        
+        .before-after-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .before-section, .after-section {
+            flex: 1;
+        }
+        
+        .before-section h4, .after-section h4 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .treatment-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .treatment-image:hover {
+            transform: scale(1.02);
+        }
+        
+        @media (max-width: 768px) {
+            .service-modal-body {
+                padding: 30px 20px;
+            }
+            
+            .service-detail-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .before-after-container {
+                flex-direction: column;
+            }
+            
+            .treatment-image {
+                height: 200px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -58,8 +230,8 @@
                         <div class="contact-item">
                             <i class="far fa-clock"></i>
                             <div>
-                                <span>Monday - Friday 08:00-19:00</span>
-                                <span>Saturday and Sunday - CLOSED</span>
+                                <span>Monday - Friday 10:00-18:00</span>
+                                <span>Saturday - 10:00-14:00</span>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -127,7 +299,7 @@
             
             <div class="services-grid">
                 <!-- Service Card 1 -->
-                <div class="service-card">
+                <div class="service-card" data-service-id="dental-implants">
                     <div class="service-card-inner">
                         <div class="service-icon">
                             <i class="fas fa-teeth"></i>
@@ -224,6 +396,21 @@
                         </div>
                         <h3 class="service-title">Pediatric Care</h3>
                         <p class="service-description">Gentle and friendly dental care designed specifically for children's unique needs.</p>
+                        <a href="#" class="service-link">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 8 - Aesthetic Fillings -->
+                <div class="service-card" data-service-id="aesthetic-fillings">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-fill-drip"></i>
+                        </div>
+                        <h3 class="service-title">Aesthetic Fillings</h3>
+                        <p class="service-description">Natural-looking composite fillings that restore the beauty and function of your teeth with minimal intervention.</p>
                         <a href="#" class="service-link">
                             Learn More
                             <i class="fas fa-arrow-right"></i>
@@ -352,7 +539,149 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
+    <!-- Service Detail Modal -->
+    <div id="serviceModal" class="service-modal">
+        <div class="service-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="service-modal-body">
+                <div class="service-detail-header">
+                    <div class="service-icon">
+                        <i id="modalServiceIcon" class="fas"></i>
+                    </div>
+                    <h2 id="modalServiceTitle"></h2>
+                </div>
+                
+                <div class="service-detail-content">
+                    <div class="service-description">
+                        <h3>About This Service</h3>
+                        <p id="modalServiceDescription"></p>
+                        
+                        <h3>Process</h3>
+                        <div id="modalServiceProcess" class="process-steps">
+                            <!-- Process steps will be inserted here by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="service-gallery">
+                        <h3>Before & After</h3>
+                        <div class="before-after-container">
+                            <div class="before-section">
+                                <h4>Before</h4>
+                                <img id="beforeImage" src="" alt="Before treatment" class="treatment-image">
+                            </div>
+                            <div class="after-section">
+                                <h4>After</h4>
+                                <img id="afterImage" src="" alt="After treatment" class="treatment-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script>
+        // Service data - this would be expanded with all services
+        const servicesData = {
+            'aesthetic-fillings': {
+                title: 'Aesthetic Fillings',
+                icon: 'fa-fill-drip',
+                description: 'Natural-looking composite fillings that restore the beauty and function of your teeth with minimal intervention. Our tooth-colored fillings are made from durable composite resin that blends seamlessly with your natural teeth.',
+                process: [
+                    'Initial consultation and examination',
+                    'Tooth preparation and cleaning',
+                    'Application of tooth-colored composite material',
+                    'Shaping and hardening the filling',
+                    'Final polishing for a natural look'
+                ],
+                beforeImage: 'images/treatments/before-filling.jpg',
+                afterImage: 'images/treatments/after-filling.jpg'
+            },
+            'dental-implants': {
+                title: 'Dental Implants',
+                icon: 'fa-teeth',
+                description: 'The most modern and durable solution for replacing missing teeth with natural-looking results. Dental implants provide a permanent base for replacement teeth that look, feel, and function like natural teeth.',
+                process: [
+                    'Comprehensive dental examination',
+                    'Implant placement surgery',
+                    'Healing and osseointegration period',
+                    'Abutment placement',
+                    'Custom crown attachment'
+                ],
+                beforeImage: 'images/treatments/before-implant.jpg',
+                afterImage: 'images/treatments/after-implant.jpg'
+            }
+            // Add more services here following the same structure
+        };
+
+        // Modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('serviceModal');
+            const closeBtn = document.querySelector('.close-modal');
+            const serviceLinks = document.querySelectorAll('.service-link');
+
+            // Open modal when clicking Learn More
+            serviceLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const serviceId = this.closest('.service-card').getAttribute('data-service-id');
+                    if (serviceId && servicesData[serviceId]) {
+                        openServiceModal(serviceId);
+                    }
+                });
+            });
+
+            // Close modal when clicking X
+            closeBtn.addEventListener('click', closeModal);
+
+            // Close modal when clicking outside content
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    closeModal();
+                }
+            });
+
+            function openServiceModal(serviceId) {
+                const service = servicesData[serviceId];
+                if (!service) return;
+
+                // Update modal content
+                document.getElementById('modalServiceTitle').textContent = service.title;
+                document.getElementById('modalServiceIcon').className = `fas ${service.icon}`;
+                document.getElementById('modalServiceDescription').textContent = service.description;
+                
+                // Update process steps
+                const processContainer = document.getElementById('modalServiceProcess');
+                processContainer.innerHTML = service.process.map(step => 
+                    `<div class="process-step">
+                        <i class="fas fa-check-circle"></i>
+                        <span>${step}</span>
+                    </div>`
+                ).join('');
+
+                // Update before/after images
+                document.getElementById('beforeImage').src = service.beforeImage;
+                document.getElementById('afterImage').src = service.afterImage;
+
+                // Show modal
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
 </html>

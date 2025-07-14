@@ -5,9 +5,9 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
-    const mobileMenuToggle = document.querySelector('.mobileMenuToggle');
-    const mobileMenuOverlay = document.querySelector('.mobileMenuOverlay');
-    const closeMobileMenu = document.querySelector('.closeMobileMenu');
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const closeMobileMenu = document.querySelector('.close-mobile-menu');
 
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', function() {
@@ -243,25 +243,69 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize scroll handler
     function handleScroll() {
+        console.log('handleScroll called');
+        
         // Header scroll effect - only apply transparency on homepage
         const header = document.getElementById('header');
+        const mobileHeader = document.querySelector('.mobile-header');
         const isHomepage = document.body.classList.contains('homepage');
         
-        if (isHomepage) {
-            // On homepage, add/remove scrolled class based on scroll position
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
+        // Get scroll position
+        const scrollPosition = window.scrollY;
+        const scrolled = scrollPosition > 50;
+        
+        console.log('Scroll position:', scrollPosition, 'Scrolled:', scrolled, 'Is homepage:', isHomepage);
+        
+        // Handle desktop header
+        if (header) {
+            console.log('Desktop header found');
+            
+            if (isHomepage) {
+                // On homepage, toggle scrolled class based on scroll position
+                if (scrolled) {
+                    console.log('Adding scrolled class to desktop header');
+                    header.classList.add('scrolled');
+                } else {
+                    console.log('Removing scrolled class from desktop header');
+                    header.classList.remove('scrolled');
+                }
             } else {
-                header.classList.remove('scrolled');
+                // On other pages, always show solid header
+                console.log('Non-homepage - forcing solid header');
+                header.classList.add('scrolled');
             }
         } else {
-            // On all other pages, ensure header is always solid
-            header.classList.add('scrolled');
+            console.error('Desktop header element not found!');
+        }
+        
+        // Handle mobile header
+        if (mobileHeader) {
+            console.log('Mobile header found');
+            
+            if (isHomepage) {
+                // On homepage, toggle scrolled class based on scroll position
+                if (scrolled) {
+                    console.log('Adding scrolled class to mobile header');
+                    mobileHeader.classList.add('scrolled');
+                } else {
+                    console.log('Removing scrolled class from mobile header');
+                    mobileHeader.classList.remove('scrolled');
+                }
+            } else {
+                // On other pages, always show solid header
+                console.log('Non-homepage - forcing solid mobile header');
+                mobileHeader.classList.add('scrolled');
+            }
+        } else {
+            console.log('Mobile header element not found (this is normal on desktop)');
         }
     }
 
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Initialize header state on page load
+    handleScroll();
 
     // Active Navigation on Scroll
     function highlightNavigation() {

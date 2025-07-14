@@ -200,87 +200,6 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .staff-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        
-        .staff-image {
-            height: 300px;
-            overflow: hidden;
-        }
-        
-        .staff-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .staff-card:hover .staff-image img {
-            transform: scale(1.05);
-        }
-        
-        .staff-info {
-            padding: 25px;
-            text-align: center;
-        }
-        
-        .staff-info h3 {
-            color: var(--primary);
-            margin-bottom: 5px;
-            font-size: 1.5rem;
-        }
-        
-        .staff-role {
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 15px;
-            display: block;
-            font-size: 1rem;
-        }
-        
-        .staff-bio {
-            color: var(--text-light);
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            height: 0;
-            overflow: hidden;
-            transition: height 0.3s ease;
-        }
-        
-        .staff-bio.expanded {
-            height: auto;
-            margin-bottom: 20px;
-        }
-        
-        .read-more {
-            color: var(--primary);
-            font-weight: 600;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            transition: color 0.3s ease;
-            background: none;
-            border: none;
-            font-size: 14px;
-            padding: 0;
-        }
-        
-        .read-more:hover {
-            color: var(--primary-dark);
-        }
-        
-        .read-more i {
-            transition: transform 0.3s ease;
-            font-size: 12px;
-        }
-        
-        .read-more.expanded i {
-            transform: rotate(180deg);
-        }
         
         .social-links-staff {
             display: flex;
@@ -471,8 +390,8 @@
                         <div class="contact-item">
                             <i class="far fa-clock"></i>
                             <div>
-                                <span>Monday - Friday 08:00-19:00</span>
-                                <span>Saturday and Sunday - CLOSED</span>
+                                <span>Monday - Friday 10:00-18:00</span>
+                                <span>Saturday - 10:00-14:00</span>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -535,15 +454,15 @@
         <div class="container">
             <div class="doctor-profile">
                 <div class="doctor-image">
-                    <img src="images/dr-ermelinda-mara.jpg" alt="Dr. Ermelinda Mara">
+                    <img src="images/Ina.jpg" alt="Dr. Ermelinda Mara">
                 </div>
                 <div class="doctor-intro">
                     <h1>Dr. Ermelinda Mara</h1>
-                    <p class="specialty">General & Cosmetic Dentist</p>
+                    <p class="specialty">Oral Surgery & Cosmetic Dentist</p>
                     <div class="qualifications">
-                        <span class="qualification">DDS, PhD</span>
-                        <span class="qualification">Specialist in Restorative Dentistry</span>
-                        <span class="qualification">Member of the Albanian Dental Association</span>
+                        <span class="qualification">DDS</span>
+                        <span class="qualification">Specialist in Oral Surgery & Implantology</span>
+                        <span class="qualification">8+ Years of Experience</span>
                     </div>
                     <div class="cta-buttons">
                         <a href="#contact" class="btn btn-primary">Book an Appointment</a>
@@ -563,27 +482,27 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>With over 15 years of experience in dentistry, Dr. Ermelinda Mara is a highly skilled and compassionate dental professional dedicated to providing exceptional patient care. Her commitment to excellence and continuous education has established her as a trusted name in dental health in Tirana.</p>
-                    <p>Dr. Mara's patient-centered approach combines the latest dental technologies with a gentle touch, ensuring comfortable and effective treatments for patients of all ages.</p>
+                    <p>With 8 years of specialized experience in oral surgery and cosmetic dentistry, Dr. Ermelinda Mara is a highly skilled and compassionate dental surgeon dedicated to providing exceptional patient care. Her expertise in advanced surgical techniques and aesthetic dentistry has established her as a trusted professional in the field.</p>
+                    <p>Dr. Mara's patient-centered approach combines the latest dental technologies with a gentle touch, ensuring comfortable and effective treatments. She is committed to continuous education and staying at the forefront of dental innovations to provide the best possible care to her patients.</p>
                     
                     <div class="expertise">
                         <h3>Areas of Expertise</h3>
                         <div class="expertise-grid">
                             <div class="expertise-item">
-                                <i class="fas fa-tooth"></i>
+                                <i class="fas fa-teeth"></i>
+                                <span>Oral Surgery</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-smile"></i>
                                 <span>Cosmetic Dentistry</span>
                             </div>
                             <div class="expertise-item">
                                 <i class="fas fa-teeth"></i>
-                                <span>Restorative Dentistry</span>
+                                <span>Dental Implantology</span>
                             </div>
                             <div class="expertise-item">
-                                <i class="fas fa-tooth"></i>
-                                <span>Dental Implants</span>
-                            </div>
-                            <div class="expertise-item">
-                                <i class="fas fa-teeth-open"></i>
-                                <span>Endodontics</span>
+                                <i class="fas fa-syringe"></i>
+                                <span>Medical Aesthetics</span>
                             </div>
                         </div>
                     </div>
@@ -592,12 +511,13 @@
                     <div class="highlight-card">
                         <i class="fas fa-graduation-cap"></i>
                         <h4>Education</h4>
-                        <p>Doctor of Dental Surgery (DDS)<br>University of Tirana, Faculty of Medicine</p>
+                        <p>Doctor of Dental Surgery (DDS)<br>2012-2017<br>University of Tirana, Faculty of Medicine</p>
+                        <p>Master in Advanced Techniques in Oral and Regenerative Surgery<br>La Sapienza University of Rome, Italy</p>
                     </div>
                     <div class="highlight-card">
                         <i class="fas fa-award"></i>
-                        <h4>Experience</h4>
-                        <p>15+ Years of Professional Experience in General and Cosmetic Dentistry</p>
+                        <h4>Professional Experience</h4>
+                        <p>General Dentist (2012-2017)<br>Implantology and Oral Surgery Specialist (2018-2022)</p>
                     </div>
                     <div class="highlight-card">
                         <i class="fas fa-language"></i>
@@ -615,151 +535,87 @@
             <div class="section-header">
                 <h2>Certifications & Education</h2>
                 <div class="divider"></div>
-                <p>Dr. Ermelinda Mara's commitment to excellence is reflected in her extensive education and professional development.</p>
+                <p>Dr. Ermelinda Mara's commitment to excellence is reflected in her extensive education and professional certifications in the field of dentistry and oral surgery.</p>
             </div>
             
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <h3>Doctor of Dental Surgery (DDS)</h3>
-                        <span class="date">2005 - 2010</span>
+                        <span class="date">2012 - 2017</span>
                         <p>University of Tirana, Faculty of Medicine</p>
-                        <p>Graduated with honors, specializing in Restorative Dentistry</p>
+                        <p>General Dentistry</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Advanced Training in Cosmetic Dentistry</h3>
-                        <span class="date">2012</span>
-                        <p>European Academy of Esthetic Dentistry</p>
-                        <p>Comprehensive training in smile design and aesthetic restorations</p>
+                        <h3>Full Formation in Implantology</h3>
+                        <span class="date">November 2018</span>
+                        <p>Certified Implantology Specialist</p>
+                        <p>Comprehensive training in dental implant placement and restoration</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Implantology Certification</h3>
-                        <span class="date">2014</span>
-                        <p>International Congress of Oral Implantologists</p>
-                        <p>Specialized training in dental implant placement and restoration</p>
+                        <h3>B&B Dental International Meeting</h3>
+                        <span class="date">December 2019</span>
+                        <p>Advanced Implantology and Oral Surgery</p>
+                        <p>Specialized training in advanced surgical techniques</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Invisalign Certification</h3>
-                        <span class="date">2016</span>
-                        <p>Invisalign University</p>
-                        <p>Certified provider of Invisalign clear aligners</p>
+                        <h3>Medical Aesthetical Training</h3>
+                        <span class="date">June 2021</span>
+                        <p>Certified Aesthetic Practitioner</p>
+                        <p>Advanced training in facial aesthetics and cosmetic procedures</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Laser Dentistry Certification</h3>
-                        <span class="date">2019</span>
-                        <p>World Clinical Laser Institute</p>
-                        <p>Advanced training in laser-assisted dental procedures</p>
+                        <h3>Master in Advanced Techniques in Oral and Regenerative Surgery</h3>
+                        <span class="date">2022</span>
+                        <p>La Sapienza University of Rome, Italy</p>
+                        <p>Specialized training in advanced surgical and regenerative techniques</p>
                     </div>
                 </div>
             </div>
             
             <div class="certificates-gallery">
-                <h3>Professional Certificates</h3>
+                <h3>Professional Certificates & Diplomas</h3>
                 <div class="certificate-grid">
                     <div class="certificate-item">
-                        <img src="images/certificate1.jpg" alt="Dental Degree Certificate" class="certificate-img">
-                        <p>Dental Degree</p>
+                        <img src="images/certifications/certifi6.jpg" alt="Diploma Master i Shkencave ne Stomatologji" class="certificate-img">
+                        <p>Master of Science in Dentistry<br>Albania</p>
                     </div>
                     <div class="certificate-item">
-                        <img src="images/certificate2.jpg" alt="Implantology Certification" class="certificate-img">
-                        <p>Implantology</p>
+                        <img src="images/certifications/certifi4.jpg" alt="Master in Advanced Oral Surgery" class="certificate-img horizontal-cert">
+                        <p>Master in Advanced Oral Surgery<br>La Sapienza University of Rome</p>
                     </div>
                     <div class="certificate-item">
-                        <img src="images/certificate3.jpg" alt="Laser Dentistry Certification" class="certificate-img">
-                        <p>Laser Dentistry</p>
+                        <img src="images/certifications/certifi7.jpg" alt="Second Master's Degree" class="certificate-img">
+                        <p>Specialization in Implantology</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Professional Experience Section -->
-    <section class="experience-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Professional Experience</h2>
-                <div class="divider"></div>
-            </div>
-            
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-date">2018 - Present</div>
-                    <div class="experience-content">
-                        <h3>Founder & Lead Dentist</h3>
-                        <h4>EMAR Dental Clinic, Tirana</h4>
-                        <ul>
-                            <li>Established and currently lead a successful private dental practice</li>
-                            <li>Specialize in cosmetic and restorative dentistry procedures</li>
-                            <li>Mentor junior dentists and dental assistants</li>
-                            <li>Implement latest dental technologies and treatment protocols</li>
-                        </ul>
+                    <div class="certificate-item">
+                        <img src="images/certifications/certifi1.jpg" alt="Medical Aesthetical Training" class="certificate-img">
+                        <p>Medical Aesthetical Training<br>June 2021</p>
                     </div>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="experience-date">2012 - 2018</div>
-                    <div class="experience-content">
-                        <h3>Senior Dentist</h3>
-                        <h4>Dental Care Center, Tirana</h4>
-                        <ul>
-                            <li>Performed comprehensive dental treatments for a diverse patient base</li>
-                            <li>Specialized in cosmetic and restorative procedures</li>
-                            <li>Collaborated with dental specialists for complex cases</li>
-                        </ul>
+                    <div class="certificate-item">
+                        <img src="images/certifications/certifi2.jpg" alt="B&B Dental International Meeting" class="certificate-img">
+                        <p>B&B Dental International Meeting<br>December 2019</p>
                     </div>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="experience-date">2010 - 2012</div>
-                    <div class="experience-content">
-                        <h3>General Dentist</h3>
-                        <h4>Community Dental Clinic, Tirana</h4>
-                        <ul>
-                            <li>Provided general dental care to patients of all ages</li>
-                            <li>Gained experience in various dental procedures</li>
-                            <li>Developed strong patient communication and treatment planning skills</li>
-                        </ul>
+                    <div class="certificate-item">
+                        <img src="images/certifications/certifi3.jpg" alt="Medical Aesthetical Training" class="certificate-img">
+                        <p>Medical Aesthetical Training<br>June 2021</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Professional Affiliations -->
-    <section class="affiliations-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Professional Affiliations</h2>
-                <div class="divider"></div>
-            </div>
-            
-            <div class="affiliations-grid">
-                <div class="affiliation-item">
-                    <i class="fas fa-user-md"></i>
-                    <h3>Albanian Dental Association</h3>
-                    <p>Active Member since 2010</p>
-                </div>
-                <div class="affiliation-item">
-                    <i class="fas fa-globe-europe"></i>
-                    <h3>European Federation of Periodontology</h3>
-                    <p>Member since 2015</p>
-                </div>
-                <div class="affiliation-item">
-                    <i class="fas fa-tooth"></i>
-                    <h3>International Congress of Oral Implantologists</h3>
-                    <p>Fellow Member since 2014</p>
+                    <div class="certificate-item">
+                        <img src="images/certifications/certifi5.jpg" alt="Full Formation in Implantology" class="certificate-img">
+                        <p>Full Formation in Implantology<br>November 2018</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -797,18 +653,6 @@
                     <h3>Our Values</h3>
                     <p>Integrity, compassion, excellence, and patient-centered care are the foundation of everything we do at EMAR Dental Clinic.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section class="cta-section" id="contact">
-        <div class="container">
-            <h2>Schedule Your Consultation</h2>
-            <p>Experience exceptional dental care with Dr. Ermelinda Mara</p>
-            <div class="cta-buttons">
-                <a href="tel:+355694050402" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call Now</a>
-                <a href="contact.html#appointment" class="btn btn-secondary">Book Online</a>
             </div>
         </div>
     </section>
@@ -873,7 +717,6 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- JavaScript -->
     <script>
         // Mobile Menu Toggle
         const mobileMenuToggle = document.querySelector('.mobileMenuToggle');

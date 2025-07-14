@@ -235,15 +235,15 @@ body:not(.homepage) #header .mainNav {
 
 /* Scrolled state for homepage */
 .homepage #header.scrolled {
-    background-color: #2c2c2c;
+    background-color: #2c2c2c !important;
 }
 
 .homepage #header.scrolled .topBar {
-    background-color: #2c2c2c;
+    background-color: #2c2c2c !important;
 }
 
 .homepage #header.scrolled .mainNav {
-    background-color: #404040;
+    background-color: #404040 !important;
 }
 
 /* Ensure header stays transparent when not scrolled (homepage only) */

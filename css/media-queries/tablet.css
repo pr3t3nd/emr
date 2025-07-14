@@ -1,0 +1,182 @@
+/* Tablet styles (768px - 1023.98px) */
+:root {
+  --tablet-padding: 2rem;
+  --header-height: 80px;
+}
+
+/* Base tablet styles (applies to all tablet sizes) */
+body {
+  font-size: 16px;
+  padding-top: 0; /* Reset mobile padding */
+}
+
+/* Hide mobile header on tablet */
+.mobile-header {
+  display: none !important;
+}
+
+/* Show desktop header on tablet */
+#header.desktop-header {
+  display: block;
+  position: fixed;
+  background: var(--light-text);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  z-index: 1000;
+}
+
+.topBar {
+  padding: 0.75rem var(--tablet-padding);
+}
+
+.topBarInner {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
+  width: auto;
+  padding: 0;
+}
+
+.logo-img {
+  height: 45px;
+}
+
+.contact-info {
+  width: auto;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  font-size: 0.95rem;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* Navigation */
+.mobileMenuToggle,
+.mobileMenuOverlay {
+  display: none !important;
+}
+
+/* Ensure desktop navigation is visible */
+.mainNav {
+  display: block !important;
+}
+
+/* Adjust main content for fixed header */
+#main-content {
+  padding-top: var(--header-height);
+}
+
+.mainNav {
+  position: static;
+  width: auto;
+  height: auto;
+  max-width: none;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.mainNav ul {
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.mainNav li {
+  width: auto;
+  border-bottom: none;
+}
+
+.mainNav a {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  position: relative;
+}
+
+.mainNav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.mainNav a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+}
+
+.hero-content {
+  padding: 3rem var(--tablet-padding);
+  text-align: left;
+  max-width: 80%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 80%;
+  margin-bottom: 2rem;
+}
+
+/* Responsive adjustments for different tablet sizes */
+
+/* Small tablets (768px - 834px) */
+@media (min-width: 768px) and (max-width: 834px) {
+  :root {
+    --tablet-padding: 1.5rem;
+  }
+  
+  .hero-content {
+    max-width: 90%;
+  }
+  
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+  
+  .contact-info {
+    gap: 1rem;
+  }
+}
+
+/* Standard tablets (835px - 1023.98px) */
+@media (min-width: 835px) and (max-width: 1023.98px) {
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+  
+  .hero p {
+    font-size: 1.3rem;
+    max-width: 85%;
+  }
+}
+
+/* Special breakpoint for landscape phones to small tablets */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* These styles are now in mobile.css */
+}
