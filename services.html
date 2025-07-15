@@ -87,9 +87,16 @@
         }
         
         .service-detail-header .service-icon {
-            font-size: 48px;
-            color: var(--accent);
             margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .service-image {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
         }
         
         .service-detail-header h2 {
@@ -302,7 +309,7 @@
                 <div class="service-card" data-service-id="dental-implants">
                     <div class="service-card-inner">
                         <div class="service-icon">
-                            <i class="fas fa-teeth"></i>
+                            <img src="images/services/dental-implant.png" alt="Invisalign Icon" class="service-image">
                         </div>
                         <h3 class="service-title">Dental Implants</h3>
                         <p class="service-description">The most modern and durable solution for replacing missing teeth with natural-looking results.</p>
@@ -317,7 +324,7 @@
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="service-icon">
-                            <i class="fas fa-crown"></i>
+                            <img src="images/services/crown.png" alt="Dental Crown Icon" class="service-image">
                         </div>
                         <h3 class="service-title">Dental Crowns</h3>
                         <p class="service-description">Quality and aesthetic repairs for your teeth and implants with custom-fitted crowns.</p>
@@ -332,7 +339,7 @@
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="service-icon">
-                            <i class="fas fa-teeth-open"></i>
+                            <img src="images/services/veneer.png" alt="Veneer Icon" class="service-image">
                         </div>
                         <h3 class="service-title">Veneers</h3>
                         <p class="service-description">Enhance your smile with high-quality, custom-made dental veneers for a perfect look.</p>
@@ -347,7 +354,7 @@
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="service-icon">
-                            <i class="fas fa-teeth"></i>
+                            <img src="images/services/invisalign.png" alt="Invisalign Icon" class="service-image">
                         </div>
                         <h3 class="service-title">Invisalign</h3>
                         <p class="service-description">Discreet and comfortable clear aligners for effective teeth straightening without metal braces.</p>
@@ -362,7 +369,7 @@
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="service-icon">
-                            <i class="fas fa-teeth"></i>
+                            <img src="images/services/braces.png" alt="Invisalign Icon" class="service-image">
                         </div>
                         <h3 class="service-title">Orthodontics</h3>
                         <p class="service-description">Professional teeth alignment solutions using modern methods and technology.</p>
@@ -377,7 +384,7 @@
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="service-icon">
-                            <i class="fas fa-sun"></i>
+                            <img src="images/services/tooth-whitening.png" alt="Teeth Whitening Icon" class="service-image">
                         </div>
                         <h3 class="service-title">Teeth Whitening</h3>
                         <p class="service-description">Safe and effective professional whitening treatments for a brighter, more confident smile.</p>
@@ -392,7 +399,7 @@
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="service-icon">
-                            <i class="fas fa-baby"></i>
+                            <img src="images/services/dentist.png" alt="Pediatric Care Icon" class="service-image">
                         </div>
                         <h3 class="service-title">Pediatric Care</h3>
                         <p class="service-description">Gentle and friendly dental care designed specifically for children's unique needs.</p>
@@ -407,7 +414,7 @@
                 <div class="service-card" data-service-id="aesthetic-fillings">
                     <div class="service-card-inner">
                         <div class="service-icon">
-                            <i class="fas fa-fill-drip"></i>
+                            <img src="images/services/dental-filling.png" alt="Aesthetic Filling Icon" class="service-image">
                         </div>
                         <h3 class="service-title">Aesthetic Fillings</h3>
                         <p class="service-description">Natural-looking composite fillings that restore the beauty and function of your teeth with minimal intervention.</p>
@@ -546,7 +553,7 @@
             <div class="service-modal-body">
                 <div class="service-detail-header">
                     <div class="service-icon">
-                        <i id="modalServiceIcon" class="fas"></i>
+                        <img id="modalServiceIcon" src="" alt="Service Icon" class="service-image">
                     </div>
                     <h2 id="modalServiceTitle"></h2>
                 </div>
@@ -585,23 +592,23 @@
     <script>
         // Service data - this would be expanded with all services
         const servicesData = {
-            'aesthetic-fillings': {
-                title: 'Aesthetic Fillings',
-                icon: 'fa-fill-drip',
-                description: 'Natural-looking composite fillings that restore the beauty and function of your teeth with minimal intervention. Our tooth-colored fillings are made from durable composite resin that blends seamlessly with your natural teeth.',
+            'dental-crowns': {
+                title: 'Dental Crowns',
+                icon: 'images/services/crown.png',
+                description: 'Custom-fitted crowns that restore strength and aesthetics to damaged or weakened teeth. Our crowns are crafted from high-quality materials to ensure durability and a natural appearance.',
                 process: [
-                    'Initial consultation and examination',
-                    'Tooth preparation and cleaning',
-                    'Application of tooth-colored composite material',
-                    'Shaping and hardening the filling',
-                    'Final polishing for a natural look'
+                    'Initial consultation and tooth preparation',
+                    'Impressions and temporary crown placement',
+                    'Custom crown fabrication',
+                    'Final fitting and adjustments',
+                    'Permanent cementation'
                 ],
-                beforeImage: 'images/treatments/before-filling.jpg',
-                afterImage: 'images/treatments/after-filling.jpg'
+                beforeImage: 'images/treatments/before-crown.jpg',
+                afterImage: 'images/treatments/after-crown.jpg'
             },
             'dental-implants': {
                 title: 'Dental Implants',
-                icon: 'fa-teeth',
+                icon: 'images/services/dental-implant.png',
                 description: 'The most modern and durable solution for replacing missing teeth with natural-looking results. Dental implants provide a permanent base for replacement teeth that look, feel, and function like natural teeth.',
                 process: [
                     'Comprehensive dental examination',
@@ -612,8 +619,91 @@
                 ],
                 beforeImage: 'images/treatments/before-implant.jpg',
                 afterImage: 'images/treatments/after-implant.jpg'
+            },
+            'veneers': {
+                title: 'Veneers',
+                icon: 'images/services/veneer.png',
+                description: 'Thin, custom-made shells that cover the front surface of teeth to improve appearance. Our veneers provide a natural, beautiful smile transformation.',
+                process: [
+                    'Initial consultation and tooth preparation',
+                    'Impressions and temporary veneers',
+                    'Custom veneer fabrication',
+                    'Final fitting and adjustments',
+                    'Bonding and finishing'
+                ],
+                beforeImage: 'images/treatments/before-veneer.jpg',
+                afterImage: 'images/treatments/after-veneer.jpg'
+            },
+            'invisalign': {
+                title: 'Invisalign',
+                icon: 'images/services/invisalign.png',
+                description: 'Clear aligners that straighten teeth without metal brackets. Invisalign provides a discreet and comfortable way to achieve a beautiful smile.',
+                process: [
+                    'Initial consultation and treatment planning',
+                    'Custom aligner fabrication',
+                    'Aligner fitting and instructions',
+                    'Regular check-ups and adjustments',
+                    'Retention phase'
+                ],
+                beforeImage: 'images/treatments/before-invisalign.jpg',
+                afterImage: 'images/treatments/after-invisalign.jpg'
+            },
+            'orthodontics': {
+                title: 'Orthodontics',
+                icon: 'images/services/braces.png',
+                description: 'Professional teeth alignment solutions using modern methods and technology. We offer various orthodontic treatments to improve your smile and oral health.',
+                process: [
+                    'Initial consultation and assessment',
+                    'Treatment planning',
+                    'Braces/aligner fitting',
+                    'Regular adjustments',
+                    'Retention phase'
+                ],
+                beforeImage: 'images/treatments/before-braces.jpg',
+                afterImage: 'images/treatments/after-braces.jpg'
+            },
+            'teeth-whitening': {
+                title: 'Teeth Whitening',
+                icon: 'images/services/tooth-whitening.png',
+                description: 'Safe and effective professional whitening treatments that brighten your smile. Our custom solutions provide lasting results without damaging your teeth.',
+                process: [
+                    'Initial consultation and assessment',
+                    'Custom tray fabrication',
+                    'Professional whitening treatment',
+                    'Maintenance instructions',
+                    'Follow-up appointments'
+                ],
+                beforeImage: 'images/treatments/before-whitening.jpg',
+                afterImage: 'images/treatments/after-whitening.jpg'
+            },
+            'pediatric-care': {
+                title: 'Pediatric Care',
+                icon: 'images/services/dentist.png',
+                description: 'Gentle and friendly dental care designed specifically for children. We make dental visits fun and educational while ensuring optimal oral health.',
+                process: [
+                    'Initial consultation and assessment',
+                    'Oral hygiene education',
+                    'Preventive treatments',
+                    'Regular check-ups',
+                    'Emergency care'
+                ],
+                beforeImage: 'images/treatments/before-pediatric.jpg',
+                afterImage: 'images/treatments/after-pediatric.jpg'
+            },
+            'aesthetic-fillings': {
+                title: 'Aesthetic Fillings',
+                icon: 'images/services/dental-filling.png',
+                description: 'Natural-looking composite fillings that restore the beauty and function of your teeth with minimal intervention. Our tooth-colored fillings are made from durable composite resin that blends seamlessly with your natural teeth.',
+                process: [
+                    'Initial consultation and examination',
+                    'Tooth preparation and cleaning',
+                    'Application of tooth-colored composite material',
+                    'Shaping and hardening the filling',
+                    'Final polishing for a natural look'
+                ],
+                beforeImage: 'images/treatments/before-filling.jpg',
+                afterImage: 'images/treatments/after-filling.jpg'
             }
-            // Add more services here following the same structure
         };
 
         // Modal functionality
@@ -656,7 +746,8 @@
 
                 // Update modal content
                 document.getElementById('modalServiceTitle').textContent = service.title;
-                document.getElementById('modalServiceIcon').className = `fas ${service.icon}`;
+                document.getElementById('modalServiceIcon').src = service.icon;
+                document.getElementById('modalServiceIcon').alt = service.title + ' Icon';
                 document.getElementById('modalServiceDescription').textContent = service.description;
                 
                 // Update process steps
